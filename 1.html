@@ -22,6 +22,8 @@ body{
 .languages{
     display:flex;
     gap:10px;
+	flex-direction:column;
+	align-items:center;
 }
 
 .languages img{
@@ -42,8 +44,6 @@ body{
 }
 
 .hero h1{
-	top:200px;
-	position: fixed;
     color:#1f3a5f;
     margin-bottom:20px;
     font-size:3rem;
@@ -91,10 +91,8 @@ footer{
     padding:20px;
 }
 #closeBtn{
-	position:fixed;
-	top: 150px;
-	left: 20px;
-	z-index: 9999;
+	position:static;
+	z-index: auto;
 	padding: 10px 15px;
 	color: white;
 	padding: 0.7em 1.7em;
@@ -117,14 +115,17 @@ footer{
 </head>
 <link rel="stylesheet" href="css.css">
 <body>
-<button id="closeBtn">Chiudi</button>
+
 
 <div id="totemHeader">
+	<button id="closeBtn">Chiudi</button>
 	<div class="logo">
         <span>Mulino del principe </span>
 		<img class="logo-img" src="qr.png">
     </div>
+	
 	<div class="languages">
+	
         <img src="img/it.svg"
              alt="Italiano"
              onclick="changeLanguage('it')">
